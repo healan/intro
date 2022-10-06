@@ -9,16 +9,19 @@
 ###### npm install --save react-dropzone   
 ###### npm install axios   
 
+  
+
+
+## ※Back※
 ### -- server
 폴더 생성 후 npm init   
 npm install express     
 npm install cors    
-npm install multer body-parser mysql read-excel-file    
+npm install multer body-parser mysql read-excel-file  
 
-
-## ※Back※
 npm install express    
             nodemon   
+               
 1. jwt 설치   
 
 2. env 파일을 사용하기 위한 모듈 설치 (express에서 환경변수 설정)   
