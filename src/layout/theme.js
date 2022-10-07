@@ -10,7 +10,11 @@ const theme = createTheme({
         contrastText: '#fff',
       },
       teal: {
-        main: '#034f84',
+        main: '#009688',
+        contrastText: '#fff',
+      },
+      indigo: {
+        main: '#1a237e',
         contrastText: '#fff',
       }
     },

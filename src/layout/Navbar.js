@@ -10,7 +10,7 @@ import theme from './theme';
 export default function Navbar() {
   return (
     <ThemeProvider theme={theme}>
-      <MuiAppBar position="static" color='teal'>
+      <MuiAppBar position="static" color='indigo'>
           <Toolbar>
               <IconButton
                   size="small"
@@ -27,7 +27,7 @@ export default function Navbar() {
             </Typography>  
               <Button color="inherit">About me.</Button>
               <Button color="inherit" href='/camera'>Experience.</Button>
-              <Button color="inherit" href='/camera'>Contact.</Button>
+              <Button color="inherit" href='/camera'>Contact ME.</Button>
           </Toolbar>
         </MuiAppBar>
       </ThemeProvider>
