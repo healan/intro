@@ -1,5 +1,4 @@
 import Main from './views/Main';
-import Test from './views/Test';
 
 var routes = [
     {

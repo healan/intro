@@ -44,11 +44,13 @@ const customRenderer = (tag, size, color) => (
 
 export default function Main(){ 
     return(
-        <Box sx={{
-            height:500,
-            width:500,
-        }}>
-             <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
-        </Box>
+        <>
+            <Box sx={{
+                height:500,
+                width:500,
+            }}>
+                <TagCloud tags={data} minSize={1} maxSize={5} renderer={customRenderer} />
+            </Box>
+        </>
        );
 }
