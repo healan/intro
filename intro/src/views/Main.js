@@ -120,6 +120,5 @@ export default function Main(){
                 </Grid>
             </Box>
         </Box>
-
        );
 }
