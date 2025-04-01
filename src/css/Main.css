@@ -1,0 +1,41 @@
+.portfolio-container {
+  font-family: inherit;
+  color: #333;
+  background-color: #fff;
+  margin: auto;
+  max-width: 1440px;
+  overflow-x: hidden;
+}
+
+.home {
+  padding: 0px;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: #222;
+}
+
+.section {
+  margin: 50px 0;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.title {
+  padding-top: 55px;
+  padding-bottom: 65px;
+  font-family: "Segoe UI";
+  justify-items: center;
+}
