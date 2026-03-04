@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
+import { useMediaQuery, useTheme } from "@mui/material";
 import {
   SiReact,
   SiJavascript,
@@ -39,15 +40,30 @@ const getRandomColor = () => {
 };
 
 const Skills = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Box display="flex" gap={15} padding={6} border="0px" width="100%">
+    <Box
+      display="flex"
+      gap={{ xs: 2, sm: 5, md: 10, lg: 15 }}
+      padding={{ xs: 2, sm: 4, md: 6 }}
+      border="0px"
+      width="100%"
+      flexDirection={{ xs: "column", md: "row" }} // ✅ 반응형 방향 설정
+    >
       <Box
         display="grid"
-        gridTemplateColumns="repeat(3, 1fr)"
-        gap={5}
-        justifyContent="center"
-        alignItems="center"
-        marginLeft={10}
+        sx={{
+          gridTemplateColumns: {
+            xs: "repeat(2, 1fr)", // 모바일: 2열
+            sm: "repeat(3, 1fr)", // 태블릿 이상: 3열
+            md: "repeat(3, 1fr)", // 데스크톱 이상: 4열
+          },
+          gap: { xs: 2, sm: 3, md: 5 },
+          justifyContent: "center",
+          alignItems: "center",
+          marginLeft: { xs: 0, sm: 2, md: 5, lg: 10 },
+        }}
       >
         {icons.map((icon, index) => {
           const randomColor = getRandomColor();
@@ -70,38 +86,56 @@ const Skills = () => {
       </Box>
 
       {/* 오른쪽: 텍스트 영역 */}
-      <Box sx={{ marginLeft: 10, marginTop: 3 }}>
+      <Box
+        sx={{
+          marginLeft: {
+            xs: 0, // 모바일: 왼쪽 여백 없음
+            sm: 5, // 작은 화면 이상: 약간의 여백
+            md: 8, // 중간 화면 이상: 더 넓은 여백
+            lg: 10, // 큰 화면 이상: 많이 띄움
+          },
+          marginTop: {
+            xs: 2, // 모바일: 여백 작게
+            sm: 3,
+            md: 5,
+          },
+        }}
+      >
         <Typography variant="h5" fontWeight="bold" fontFamily="cursive">
           what can you build?
         </Typography>
 
         <Typography variant="subtitle1" sx={{ marginTop: 5 }}>
-          🌐 <span style={{ fontWeight: "bold" }}>Business Websites - </span>
-          Establish your online presence and attract customers.
+          🌐{" "}
+          <span style={{ fontWeight: "bold" }}>
+            Business Websites {!isMobile && "-"}{" "}
+          </span>
+          {isMobile && <br />}Establish your online presence and attract
+          customers.
         </Typography>
 
         <Typography variant="subtitle1" sx={{ marginTop: 1 }}>
           📖{" "}
           <span style={{ fontWeight: "bold" }}>
-            Blog & Content Platforms -{" "}
+            Blog & Content Platforms {!isMobile && "-"}{" "}
           </span>
-          Share insights and grow your audience.
+          {isMobile && <br />}Share insights and grow your audience.
         </Typography>
 
         <Typography variant="subtitle1" sx={{ marginTop: 1 }}>
           🎓{" "}
           <span style={{ fontWeight: "bold" }}>
-            Online Courses & Membership Sites -{" "}
+            Online Courses & Membership Sites {!isMobile && "-"}{" "}
           </span>
-          Monetize knowledge with premium content.
+          {isMobile && <br />}Monetize knowledge with premium content.
         </Typography>
 
         <Typography variant="subtitle1" sx={{ marginTop: 1 }}>
           📢{" "}
           <span style={{ fontWeight: "bold" }}>
-            Landing Pages & Marketing Funnels -{" "}
+            Landing Pages & Marketing Funnels {!isMobile && "-"}{" "}
           </span>
-          Share insights and grow your audience.
+          {isMobile && <br />}Share insights and grow your audience.
         </Typography>
       </Box>
     </Box>

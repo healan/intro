@@ -1,0 +1,66 @@
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/public/img/home.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.bottom-left-wrapper {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+}
+
+.about-grid {
+  background-color: #2f3e5b;
+  border-radius: 10px;
+  opacity: 0.9;
+  padding: 32px;
+  color: #f7a1bf;
+  max-width: 500px;
+}
+
+.about-text {
+  text-align: left;
+}
+
+/* 반응형 처리 */
+@media (max-width: 600px) {
+  .about-grid {
+    padding: 20px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .bottom-left-wrapper {
+    left: 0px;
+    padding: 5px;
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+  .about-section {
+    background-position: center 20%; /* 또는 center 80% 등으로 미세 조정 가능 */
+  }
+}
+
+.about-image {
+  justify-content: right;
+  max-height: fit-content;
+}
+
+.contents-section {
+  position: relative;
+  background-position: "center";
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/public/img/home.png");
+}

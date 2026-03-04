@@ -25,15 +25,11 @@ const theme = createTheme({
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Router>
-        <Routes>
-          {routes.map((prop, key) => {
-            return (
-              <Route path={prop.path} element={prop.element()} key={key} />
-            );
-          })}
-        </Routes>
-      </Router>
+      <Routes>
+        {routes.map((prop, key) => {
+          return <Route path={prop.path} element={prop.element()} key={key} />;
+        })}
+      </Routes>
     </ThemeProvider>
   );
 };

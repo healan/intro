@@ -11,23 +11,22 @@ export default function Intro() {
     {
       id: 1,
       title: "Multilingual Web Development",
-      description:
-        "Build websites in Chinese, Korean, and English! Custom solutions for global businesses.",
-      imgsrc: "/img/intro/website.png",
+      description: `Build websites in Chinese, Korean, and English!\n\nCustom solutions for global businesses.`,
+      imgsrc: "/img/intro/webdev.svg",
     },
     {
       id: 2,
       title: "Website Maintenance & Optimization",
       description:
         " Keep your website fast and secure! Performance tuning and technical support.",
-      imgsrc: "/img/intro/search.jpg",
+      imgsrc: "/img/blog/srch.jpg",
     },
     {
       id: 3,
       title: "Multilingual Content & Localization",
       description:
         "Culturally adapted translations for a seamless global user experience.",
-      imgsrc: "/img/intro/localization.jpg",
+      imgsrc: "/img/intro/language.svg",
     },
   ];
 
@@ -46,7 +45,7 @@ export default function Intro() {
             <CardMedia
               component="img"
               height="250"
-              width="100%"
+              width="90%"
               image={card.imgsrc}
               alt=""
             />
